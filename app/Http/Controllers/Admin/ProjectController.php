@@ -131,4 +131,15 @@ class ProjectController extends Controller
 
         return redirect()->route('projects.index');
     }
+
+    public function projects()
+    {
+        $projects = Project::all();
+
+        return response()->json([
+            'success' => true,
+            'code' => 200,
+            'projects' => $projects
+        ]);
+    }
 }
