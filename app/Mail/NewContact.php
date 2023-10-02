@@ -15,13 +15,12 @@ use App\Models\Contact;
 class NewContact extends Mailable
 {
     use Queueable, SerializesModels;
-
-    /**
-     * Create a new message instance.
-     */
+    
     public function __construct(Contact $contact)
     {
+        
         //
+
     }
 
     /**
@@ -30,7 +29,7 @@ class NewContact extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'New Contact',
+            subject: 'Nuovo Contatto',
         );
     }
 
@@ -40,7 +39,7 @@ class NewContact extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.new-contact',
         );
     }
 
