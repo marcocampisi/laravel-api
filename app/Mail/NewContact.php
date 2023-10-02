@@ -10,7 +10,7 @@ use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
 //Model
-
+use App\Models\Contact;
 
 class NewContact extends Mailable
 {
